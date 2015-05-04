@@ -1,0 +1,29 @@
+div.container
+{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -256px;
+    margin-left: -256px;
+    width: 512px;
+    height: 512px;
+}
+
+input
+{
+	display: block;
+	margin: 8px 8px 8px 8px;
+}
+
+#login 
+{
+	background: linear-gradient(#DBDBDB 5%, #C9D4D6 100%);
+	border: 1px solid #C9D4D6;
+	font-weight: bold;
+	cursor: pointer;
+	color: grey;
+}
+#login:hover
+{
+	background: linear-gradient(#36CAF0 5%, #22ABE9 100%);
+}
