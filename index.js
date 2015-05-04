@@ -13,12 +13,12 @@ $(document).ready(function()
 		}
 		else 
 		{
-			validate(username, password);
+			sendrequest(username, password);
 		}
 	});
 });
 
-function validate(username, password)
+function sendrequest(username, password)
 {
 	var xmlhttp = new XMLHttpRequest();
 	
@@ -27,10 +27,16 @@ function validate(username, password)
 		if(xmlhttp.status == 200 && xmlhttp.readyState == 4)
 		{    
 			var words = xmlhttp.responseText.split(' ');
-			alert(words[0]);
+			validate(username, password, words);
 		}
 	}
 	
 	xmlhttp.open("GET", "data.txt", true);
 	xmlhttp.send();
+}
+
+function validate(username, password, data)
+{
+	for (var i in data)
+		alert(data[i]);
 }
